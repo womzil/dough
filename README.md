@@ -20,23 +20,14 @@
 </p>
 <hr />
 
-Formerly known as "cs-corelib2", dough is a very powerful library aiming to help the everyday Spigot/Plugin developer.<br>
+Formerly known as "cs-corelib2", dough is a very powerful library aiming to help the everyday Spigot/Plugin developer.
 It is packed to the brim with useful features and APIs to use and play around with.
 
-**Note that this project is still under heavy development, we don't advise using this just yet as some things are still drafts and subject to change. Documentation is still lacking and we try to improve this until we go live. We plan to go live in September of 2021. Check back then! ;)**
-
-## :page_facing_up: Table of contents
-1. [Getting Started](#mag-getting-started)
-    - [Adding dough via gradle](#adding-dough-via-gradle)
-    - [Adding dough via Maven](#adding-dough-via-maven)
-2. [Features & Documentation](#sparkles-features-and-documentation)
-    - TODO
-3. [Discord server](#headphones-discord-server)
+Dough may be more commonly known as the backbone of [Slimefun](https://github.com/Slimefun/Slimefun4).
 
 ## :mag: Getting Started
 Dough is hosted on maven-central (OSS Sonatype) for easy access.
-Furthermore it consists of multiple different submodules. You will
-learn about the different modules in a later section ([:sparkles: Features and Documentation](#sparkles-features-and-documentation)).
+Furthermore, it consists of multiple different submodules.
 
 If you want to utilise the entirety of dough, use the artifact `dough-api`.<br>
 Otherwise replace `dough-api` in the following examples with whatever module you want to import. Note that
@@ -114,6 +105,3 @@ To shadow dough and relocate it:
   </plugins>
 </build>
 ```
-
-## :sparkles: Features and Documentation
-**TODO: Finish this section**
