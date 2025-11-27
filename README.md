@@ -25,7 +25,7 @@ It is packed to the brim with useful features and APIs to use and play around wi
 
 Dough may be more commonly known as the backbone of [Slimefun](https://github.com/Slimefun/Slimefun4).
 
-**Note that this project can be considered abandoned, because Slimefun has been discontinued**
+**:warning: Note that this project can be considered officially abandoned, because Slimefun has been discontinued. This is only an unofficial repo with some fixes and updates.**
 
 ## :page_facing_up: Table of contents
 1. [Getting Started](#mag-getting-started)
