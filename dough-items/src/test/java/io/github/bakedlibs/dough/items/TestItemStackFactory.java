@@ -23,7 +23,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-class TestCustomItemStack {
+class TestItemStackFactory {
 
     @BeforeAll
     public static void init() {
@@ -51,12 +51,12 @@ class TestCustomItemStack {
 
     private static Stream<Function<ItemStack, ItemStack>> itemStackConstructors() {
         return Stream.of(
-                item -> CustomItemStack.create(item, "test"),
-                item -> CustomItemStack.create(item, "test", "test"),
-                item -> CustomItemStack.create(item, List.of("test", "test")),
-                item -> CustomItemStack.create(item, meta -> {
+                item -> ItemStackFactory.create(item, "test"),
+                item -> ItemStackFactory.create(item, "test", "test"),
+                item -> ItemStackFactory.create(item, List.of("test", "test")),
+                item -> ItemStackFactory.create(item, meta -> {
                 }),
-                item -> CustomItemStack.create(item, item.getAmount())
+                item -> ItemStackFactory.create(item, item.getAmount())
         );
     }
 
@@ -64,22 +64,22 @@ class TestCustomItemStack {
         Material material = Material.STICK;
         ItemStack itemStack = new ItemStack(material);
         return Stream.of(
-                name -> CustomItemStack.create(material, name),
-                name -> CustomItemStack.create(itemStack, name),
-                name -> CustomItemStack.create(material, name, "test"),
-                name -> CustomItemStack.create(itemStack, name, "test"),
-                name -> CustomItemStack.create(material, name, List.of("test"))
+                name -> ItemStackFactory.create(material, name),
+                name -> ItemStackFactory.create(itemStack, name),
+                name -> ItemStackFactory.create(material, name, "test"),
+                name -> ItemStackFactory.create(itemStack, name, "test"),
+                name -> ItemStackFactory.create(material, name, List.of("test"))
         );
     }
 
     private static Stream<Function<Material, ItemStack>> materialConstructors() {
         return Stream.of(
-                material -> CustomItemStack.create(material, "test"),
-                material -> CustomItemStack.create(material, "test", "test"),
-                material -> CustomItemStack.create(material, "test", List.of("test")),
-                material -> CustomItemStack.create(material, List.of("test", "test")),
-                material -> CustomItemStack.create(material, meta -> {}),
-                material -> CustomItemStack.create(new ItemStack(Material.AIR), material)
+                material -> ItemStackFactory.create(material, "test"),
+                material -> ItemStackFactory.create(material, "test", "test"),
+                material -> ItemStackFactory.create(material, "test", List.of("test")),
+                material -> ItemStackFactory.create(material, List.of("test", "test")),
+                material -> ItemStackFactory.create(material, meta -> {}),
+                material -> ItemStackFactory.create(new ItemStack(Material.AIR), material)
         );
     }
 
@@ -94,8 +94,8 @@ class TestCustomItemStack {
         Material material = Material.STICK;
         ItemStack itemStack = new ItemStack(material);
         return Stream.of(
-                lore -> CustomItemStack.create(material, null, lore),
-                lore -> CustomItemStack.create(itemStack, insertNull(lore))
+                lore -> ItemStackFactory.create(material, null, lore),
+                lore -> ItemStackFactory.create(itemStack, insertNull(lore))
         );
     }
 
@@ -103,14 +103,14 @@ class TestCustomItemStack {
         Material material = Material.STICK;
         ItemStack itemStack = new ItemStack(material);
         return Stream.of(
-                lore -> CustomItemStack.create(material, null, lore),
-                lore -> CustomItemStack.create(itemStack, null, lore)
+                lore -> ItemStackFactory.create(material, null, lore),
+                lore -> ItemStackFactory.create(itemStack, null, lore)
         );
     }
 
     @Test
     void testMaterialIsChanged() {
-        Material actual = CustomItemStack.create(new ItemStack(Material.AIR), Material.STICK).getType();
+        Material actual = ItemStackFactory.create(new ItemStack(Material.AIR), Material.STICK).getType();
         Assertions.assertEquals(Material.STICK, actual);
     }
 
