@@ -16,8 +16,13 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <!--
+          NOTE:
+          Dough compiles against Java 17.
+          Tests require Java 21 because MockBukkit 1.21 depends on it.
+          Make sure to run `mvn test` with a Java 21 JVM.
+        -->
+        <maven.compiler.release>17</maven.compiler.release>
 
         <sonar.projectKey>baked-libs_dough</sonar.projectKey>
         <sonar.organization>baked-libs</sonar.organization>
