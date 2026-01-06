@@ -1,4 +1,6 @@
-# :bagel: Dough
+# :bagel: Dough United
+
+:warning: DOWNLOADS ARE STILL TO BE RELEASED. FOR NOT YOU CAN USE IT ONLY BY COMPILING IT YOURSELF USING THE SOURCE CODE.
 
 <hr />
 <p align="center">
@@ -20,12 +22,11 @@
 </p>
 <hr />
 
-Formerly known as "cs-corelib2", dough is a very powerful library aiming to help the everyday Spigot/Plugin developer.
+This is a fork of old Dough, used by the official version of Slimefun and the Gugu Project's one.
+Formerly known simply as "Dough" or even earlier as "cs-corelib2", Dough United is a very powerful library aiming to help the everyday Paper plugin developer.
 It is packed to the brim with useful features and APIs to use and play around with.
 
-Dough may be more commonly known as the backbone of [Slimefun](https://github.com/Slimefun/Slimefun4).
-
-**:warning: Note that this project can be considered officially abandoned, because Slimefun has been discontinued. This is only an unofficial repo with some fixes and updates.**
+Dough may be more commonly known as the backbone of [Slimefun United](https://github.com/Slimefun/Slimefun4) and in the past of the original [Slimefun](https://github.com/Slimefun/Slimefun4).
 
 ## :page_facing_up: Table of contents
 1. [Getting Started](#mag-getting-started)
@@ -119,7 +120,7 @@ To shadow dough and relocate it:
 ## :sparkles: Features and Documentation
 **TODO: Finish this section**
 
-## :headphones: Discord server
+## :headphones: (Old) Discord server
 You can also find us on discord by the way!
 If you need any help with dough or have a question regarding this project, feel free to join and connect with other members of the community.
 Note that this server is not as active at times, so response times may vary.
